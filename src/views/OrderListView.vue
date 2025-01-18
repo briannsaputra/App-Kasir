@@ -39,8 +39,8 @@
                             <td>{{ order.waitress.name }}</td>
                             <td>{{ order.cashier ? order.cashier.name : '' }}</td>
                             <td class="btn-actions">
-                                <button class="btn btn-primary btn-sm">
-                                    <i class="bi bi-pencil-square"></i> detail
+                                <button class="btn btn-primary btn-sm text-white">
+                                    <router-link :to="{ name: 'orderDetail', params: { orderId: order.id } } "class="text-white text-decoration-none">Detail</router-link>
                                 </button>
                             </td>
                         </tr>
@@ -91,7 +91,7 @@ export default {
                     this.orders = response.data.data
                 })
                 .catch(error => {
-                    if(error.response.status == 401) {
+                    if (error.response.status == 401) {
                         localStorage.removeItem('token')
                         localStorage.removeItem('email')
                         localStorage.removeItem('name')
