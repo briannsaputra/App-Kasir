@@ -19,6 +19,9 @@
             <RouterLink to="/order-list" class="custom-link">Order List</RouterLink>
             </li>
             <li class="nav-item me-3" v-if="role == 4">
+            <RouterLink to="/order-report" class="custom-link">Order Report</RouterLink>
+            </li>
+            <li class="nav-item me-3" v-if="role == 4">
             <RouterLink to="/product" class="custom-link">Product</RouterLink>
             </li>
             <li class="nav-item" >

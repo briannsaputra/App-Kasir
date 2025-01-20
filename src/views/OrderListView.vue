@@ -36,8 +36,8 @@
                                 </span>
                             </td>
                             <td class="text-end">{{ order.total }}</td>
-                            <td>{{ order.waitress.name }}</td>
-                            <td>{{ order.cashier ? order.cashier.name : '' }}</td>
+                            <td>{{ order.waitress ? order.waitress.name : '-' }}</td>
+                            <td>{{ order.cashier ? order.cashier.name : '-' }}</td>
                             <td class="btn-actions">
                                 <button class="btn btn-primary btn-sm text-white">
                                     <router-link :to="{ name: 'orderDetail', params: { orderId: order.id } } "class="text-white text-decoration-none">Detail</router-link>
